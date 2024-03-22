@@ -2,11 +2,10 @@ from random import *
 
 
 def draw_numbers():
-    drawn = []
+    drawn = set()
     while len(drawn) < 6:
-        drawn.append(randint(0, 61))
-        drawn = list(set(drawn))
-    return drawn
+        drawn.add(randint(0, 60))
+    return sorted(list(drawn))
 
 
 def check_and_fix_input_numbers(numbers):
