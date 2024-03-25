@@ -30,7 +30,7 @@ else:
         print(f"Drawn numbers : {cpu_numbers}")
         matched_numbers = list(set(new_user_numbers).intersection(set([cpu_numbers])))
         if len(matched_numbers) > 0:
-            number = "number" if len(matched_numbers) == 1 else "Numbers"
+            number = "number" if len(matched_numbers) == 1 else "numbers"
             print(f"You matched {len(matched_numbers)} {number} !!")
             print(f"Matched {number} : {matched_numbers}")
         else:
