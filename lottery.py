@@ -28,9 +28,10 @@ else:
         print(f"Your numbers are : {new_user_numbers}")
         cpu_numbers = draw_numbers()
         print(f"Drawn numbers : {cpu_numbers}")
-        matched_numbers = list(set(new_user_numbers).intersection(set(cpu_numbers)))
+        matched_numbers = list(set(new_user_numbers).intersection(set([cpu_numbers])))
         if len(matched_numbers) > 0:
-            print(f"You matched {len(matched_numbers)} number(s) !!")
-            print(f"Matched number(s) : {matched_numbers}")
+            number = "number" if len(matched_numbers) == 1 else "numbers"
+            print(f"You matched {len(matched_numbers)} {number} !!")
+            print(f"Matched {number} : {matched_numbers}")
         else:
             print("You matched no numbers. Better luck next time!")
